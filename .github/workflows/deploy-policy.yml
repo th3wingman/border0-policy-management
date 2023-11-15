@@ -7,6 +7,9 @@ on:
   pull_request:
     types:
       - closed
+    paths:
+      - "*.json"
+
 
 jobs:
   update-border0-policy:
@@ -17,31 +20,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Run update command for each policy file
+
+
+      - name: Install Border0 CLI
         run: |
           sudo curl https://download.border0.com/linux_amd64/border0 -o /usr/bin/border0
           sudo chmod +x /usr/bin/border0
-
-      - name: Run update command for each policy file
-        run: |
-          export json_files=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.json$' | xargs)
-          for file in $json_files;
-          do
-            echo "Processing $file"
-            policy_name=$(echo $file | sed 's/\.json$//')
-            echo "Policy name: $policy_name"
-            border0 policy edit --policy-file=$file --name=$policy_name
-          done
 
       - name: Run update command for all policy files
         run: |
           export json_files=$(ls *.json | xargs)
           for file in $json_files;
           do
-            echo "Processing $file"
             policy_name=$(echo $file | sed 's/\.json$//')
-            echo "Policy name: $policy_name"
+            echo -e "\nProcessing $file : policy name: $policy_name"
             border0 policy edit --policy-file=$file --name=$policy_name
           done          
-          
-          
+
+#eof
