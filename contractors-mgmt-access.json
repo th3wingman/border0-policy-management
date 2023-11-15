@@ -1,0 +1,19 @@
+{
+  "action": [
+    "ssh"
+  ],
+  "condition": {
+    "when": {},
+    "where": {
+      "allowed_ip": [
+        "0.0.0.0/0"
+      ]
+    },
+    "who": {
+      "email": [
+        "adhdengine@gmail.com"
+      ]
+    }
+  },
+  "version": "v1"
+}
