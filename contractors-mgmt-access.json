@@ -1,17 +1,21 @@
 {
   "action": [
-    "ssh"
+    "database",
+    "ssh",
+    "http"
   ],
   "condition": {
     "when": {},
     "where": {
       "allowed_ip": [
         "0.0.0.0/0"
-      ]
+      ],
+      "country": []
     },
     "who": {
       "email": [
-        "adhdengine@gmail.com"
+        "project.manager@3rd-party-contracting.company",
+        "fancy.architect@design-firm.info"
       ]
     }
   },
