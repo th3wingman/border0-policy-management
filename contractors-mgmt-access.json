@@ -1,8 +1,7 @@
 {
   "action": [
     "database",
-    "ssh",
-    "http"
+    "http",
     "ssh"
   ],
   "condition": {
@@ -17,8 +16,8 @@
       "email": [
         "project.manager@3rd-party-contracting.company",
         "fancy.architect@design-firm.info"
-      ]
-      "email": []
+      ],
+      "domain": []
     }
   },
   "version": "v1"
