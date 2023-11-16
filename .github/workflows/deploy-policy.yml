@@ -8,8 +8,7 @@ on:
     types:
       - closed
     paths:
-      - *.json
-
+      - "*.json"
 
 
 jobs:
