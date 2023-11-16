@@ -6,3 +6,5 @@ Create a new file with the *.json extension and add it to the repository. The fi
 In order to update a policy definition, update the file and push the changes to the repository. The Border0 GitHub Action will automatically update the policy definition in the Border0 service.
 
 Create a Branch and make required changes to the policy definition. Once the changes are ready, create a Pull Request to merge the changes into the master branch. Once the Pull Request is merged, the Border0 GitHub Action will automatically update the policy definition in the Border0 service.
+
+![Border0 GitHub Action Flow](img/diagram.png)
