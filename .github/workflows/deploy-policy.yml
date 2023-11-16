@@ -24,6 +24,8 @@ jobs:
 
       - name: Run update command for each policy file
         run: |
+          echo guthub.event.before: ${{ github.event.before }}
+          echo guthub.sha: ${{ github.sha }}
           export json_files=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.json$' | xargs)
           for file in $json_files;
           do
