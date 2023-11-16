@@ -17,6 +17,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+
       - name: Run update command for each policy file
         run: |
           sudo curl https://download.border0.com/linux_amd64/border0 -o /usr/bin/border0
@@ -35,15 +39,15 @@ jobs:
             border0 policy edit --policy-file=$file --name=$policy_name
           done
 
-      - name: Run update command for all policy files
-        run: |
-          export json_files=$(ls *.json | xargs)
-          for file in $json_files;
-          do
-            echo "Processing $file"
-            policy_name=$(echo $file | sed 's/\.json$//')
-            echo "Policy name: $policy_name"
-            border0 policy edit --policy-file=$file --name=$policy_name
-          done          
+      # - name: Run update command for all policy files
+      #   run: |
+      #     export json_files=$(ls *.json | xargs)
+      #     for file in $json_files;
+      #     do
+      #       echo "Processing $file"
+      #       policy_name=$(echo $file | sed 's/\.json$//')
+      #       echo "Policy name: $policy_name"
+      #       border0 policy edit --policy-file=$file --name=$policy_name
+      #     done          
           
           
