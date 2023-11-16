@@ -1,6 +1,8 @@
 {
   "action": [
-    "ssh"
+    "database",
+    "ssh",
+    "http"
   ],
   "condition": {
     "when": {},
@@ -11,12 +13,7 @@
       ],
       "country": [
         "JP",
-        "CA",
         "US",
-        "AU",
-        "NZ",
-        "BR",
-        "AU",
         "NL"
       ]
     },
