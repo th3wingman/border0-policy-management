@@ -1,6 +1,8 @@
 {
   "action": [
     "database",
+    "ssh",
+    "http"
     "ssh"
   ],
   "condition": {
@@ -12,6 +14,10 @@
       "country": []
     },
     "who": {
+      "email": [
+        "project.manager@3rd-party-contracting.company",
+        "fancy.architect@design-firm.info"
+      ]
       "email": []
     }
   },
