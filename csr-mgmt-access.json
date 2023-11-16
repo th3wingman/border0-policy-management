@@ -1,6 +1,7 @@
 {
   "action": [
-    "ssh"
+    "database",
+    "http"
   ],
   "condition": {
     "when": {},
