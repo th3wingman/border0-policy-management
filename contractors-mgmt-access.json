@@ -2,8 +2,7 @@
   "action": [
     "database",
     "http",
-    "ssh",
-    "http"
+    "ssh"
   ],
   "condition": {
     "when": {},
