@@ -1,5 +1,6 @@
 {
   "action": [
+    "database",
     "ssh"
   ],
   "condition": {
@@ -7,12 +8,11 @@
     "where": {
       "allowed_ip": [
         "0.0.0.0/0"
-      ]
+      ],
+      "country": []
     },
     "who": {
-      "email": [
-        "adhdengine@gmail.com"
-      ]
+      "email": []
     }
   },
   "version": "v1"
